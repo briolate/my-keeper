@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="keeperApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Who's My Keeper</title>
+    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="stylesheets/main.css">
+  </head>
+  <body ng-app="myApp">
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Who's My Keeper?</h1>
+          <p>A web app to help you determine your league keeper and stop
+          sucking at fantasy football.</p>
+      </div>
+    </div>
+
+    <div class="player-row" ng-controller="valueCalculator">
+      <div class="player1 col-sm-4">
+        <img src="img/player.png" alt="Football player icon" style="width:75%;height:75%">
+        </br></br>ADP:
+        <input ng-model="adp" type="number">
+        </br></br>Pick lost:
+        <input ng-model="pickLost" type="number">
+        </br></br>
+        <button ng-click="tdv(adp, pickLost)" type="button" name="button">TDV</button>
+        <p>{{ calculate }}</p>
+      </div>
+      <div class="player2 col-sm-4">
+        <img src="img/add-player.png" alt="Add player icon" style="width:75%;height:75%">
+      </div>
+    </div>
+
+    <!-- Invlude Angular and UI.Bootstrap -->
+    <script src="lib/angular.min.js" charset="utf-8"></script>
+    <script src="lib/ui-bootstrap-tpls-2.5.0.min.js" charset="utf-8"></script>
+    <!-- Our Scripts -->
+    <script src="js/app.js" charset="utf-8"></script>
+    <script src="js/draftValueController.js" charset="utf-8"></script>
+  </body>
+</html>
