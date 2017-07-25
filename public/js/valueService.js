@@ -1,4 +1,4 @@
-var app = angular.module("keeperApp", ["ui.bootstrap"]);
+var app = angular.module("keeperApp");
 
 app.factory("valueService", function() {
 
@@ -229,12 +229,11 @@ app.factory("valueService", function() {
     {"num": 224, "value": 2},
   ];
 
-  function tdv(adp, pick) {
+  function valueConverter() {
     adp.num === adp.value;
-    return adp - pick;
   }
 
   return {
-    tdv: tdv
+    valueConverter: valueConverter
   };
 });

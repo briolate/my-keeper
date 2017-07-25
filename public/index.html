@@ -26,28 +26,28 @@
         <input ng-model="pickLost" type="number">
         </br></br>
         <button ng-click="getTDV(adp, pickLost)" type="button" name="button">TDV</button>
-        <p>{{ calculate }}</p>
+        <p>{{ adp - pickLost}}</p>
       </div>
       <div class="player2 col-sm-4">
         <img src="img/add-player.png" alt="Add player icon" style="width:75%;height:75%">
       </div>
     </div>
 
-    <footer>
+    <!-- <footer>
       <p>
         ADP: Average Draft Position. This is the players preseason ranking.</br>
         Pick Lost: The pick you are losing for keeping this player.</br>
         TDV: Total Draft Value. This is the total value of your player considering the pick
         that is lost with keeping him.
       </p>
-    </footer>
+    </footer> -->
 
     <!-- Invlude Angular and UI.Bootstrap -->
     <script src="lib/angular.min.js" charset="utf-8"></script>
     <script src="lib/ui-bootstrap-tpls-2.5.0.min.js" charset="utf-8"></script>
-    <!-- Our Scripts -->
+    <!-- Scripts -->
+    <script src="js/app.js" charset="utf-8"></script>
     <script src="js/valueService.js" charset="utf-8"></script>
     <script src="js/valueController.js" charset="utf-8"></script>
-    <script src="js/app.js" charset="utf-8"></script>
   </body>
 </html>

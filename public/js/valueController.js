@@ -1,12 +1,12 @@
-var app = angular.module("keeperApp", ["ui.bootstrap"]);
+var app = angular.module("keeperApp");
 
-app.controller("valueController", function($scope, valueService) {
+app.controller("valueController", ["$scope", function($scope, valueService) {
 
-  $scope.calculate = function(value1, value2) {
-    $scope.getTDV = valueService.tdv(adp, pickLost);
+  $scope.calculate = function() {
+    $scope.getTDV = valueService.valueConverter(adp, pickLost);
   };
 
-});
+}]);
 
 
 
