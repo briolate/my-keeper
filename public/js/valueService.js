@@ -226,7 +226,7 @@ app.factory("valueService", function() {
     {"num": 221, "value": 3},
     {"num": 222, "value": 2.6},
     {"num": 223, "value": 2.3},
-    {"num": 224, "value": 2},
+    {"num": 224, "value": 2}
   ];
 
   function valueConverter() {
