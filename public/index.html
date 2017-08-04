@@ -21,12 +21,12 @@
       <div class="player1 col-sm-4">
         <img src="img/player.png" alt="Football player icon" style="width:75%;height:75%">
         </br></br>ADP:
-        <input ng-model="adp" type="number">
+        <input ng-model="player.adp" type="number">
         </br></br>Pick lost:
-        <input ng-model="pickLost" type="number">
+        <input ng-model="player.pick" type="number">
         </br></br>
-        <button ng-click="getTDV(adp, pickLost)" type="button" name="button">TDV</button>
-        <p>{{ adp - pickLost}}</p>
+        <button ng-click="TKV()" type="button" name="button">TKV</button>
+        <output>{{ tkv }}</output>
       </div>
       <div class="player2 col-sm-4">
         <img src="img/add-player.png" alt="Add player icon" style="width:75%;height:75%">
@@ -37,7 +37,7 @@
       <p>
         ADP: Average Draft Position. This is the players preseason ranking.</br>
         Pick Lost: The pick you are losing for keeping this player.</br>
-        TDV: Total Draft Value. This is the total value of your player considering the pick
+        TKP: Total Keeper Value. This is the total value of your keeper considering the pick
         that is lost with keeping him.
       </p>
     </footer> -->
@@ -47,7 +47,6 @@
     <script src="lib/ui-bootstrap-tpls-2.5.0.min.js" charset="utf-8"></script>
     <!-- Scripts -->
     <script src="js/app.js" charset="utf-8"></script>
-    <script src="js/valueService.js" charset="utf-8"></script>
     <script src="js/valueController.js" charset="utf-8"></script>
   </body>
 </html>
