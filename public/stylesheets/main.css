@@ -11,4 +11,67 @@ footer {
   width: 100%;
   background-color: #FFF7C0; }
 
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #EDF5E1;
+  transition: 0.2s;
+  -moz-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+a:focus,
+a:hover {
+  opacity: .7;
+  text-decoration: none;
+}
+
+/*
+ * Header
+ */
+
+ .inner {
+   padding: 30px;
+ }
+ 
+.masthead-nav > li,
+.masthead-brand > li {
+  display: inline-block;
+}
+.masthead-nav > li + li,
+.masthead-brand > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a,
+.masthead-brand > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #EDF5E1;
+}
+
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus,
+.masthead-brand > li > a:hover,
+.masthead-brand > li > a:focus {
+  background-color: transparent;
+  color: #05386B;
+}
+
+.masthead a {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="keeperApp">
+<html ng-app="draftApp">
   <head>
     <meta charset="utf-8">
     <title>Who's My Keeper</title>
@@ -7,46 +7,33 @@
     <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="stylesheets/main.css">
   </head>
-  <body ng-app="myApp">
+  <body>
 
-    <div class="container">
-      <div class="jumbotron">
-        <h1>Who's My Keeper?</h1>
-          <p>A web app to help you determine your league keeper and stop
-          sucking at fantasy football.</p>
+    <div id="wrap">
+      <div class="masthead clearfix">
+        <div class="inner">
+          <h3 class="masthead-brand"><a href="#!/home">Fantasy Draft HQ</a></h3>
+            <nav>
+              <ul class="nav masthead-nav">
+                <li><a href="#!/myKeeper"><img src="img/calculator.png" alt="calculator icon" height="60px" width="60px"></a></li>
+                <li><a href="#!/draftOrder"><img src="img/dice.png" height="60px" width="60px" alt="dice icon"></a></li>
+                <li><a href="#"><img src="img/rankings.png" height="60px" width="60px" alt="rankings icon"></a></li>
+              </ul>
+            </nav>
+        </div>
       </div>
+      <div class="push"></div>
     </div>
 
-    <div class="player-row" ng-controller="valueController">
-      <div class="player1 col-sm-4">
-        <img src="img/player.png" alt="Football player icon" style="width:75%;height:75%">
-        </br></br>ADP:
-        <input ng-model="player.adp" type="number">
-        </br></br>Pick lost:
-        <input ng-model="player.pick" type="number">
-        </br></br>
-        <button ng-click="TKV()" type="button" name="button">TKV</button>
-        <output>{{ tkv }}</output>
-      </div>
-      <div class="player2 col-sm-4">
-        <img src="img/add-player.png" alt="Add player icon" style="width:75%;height:75%">
-      </div>
-    </div>
-
-    <!-- <footer>
-      <p>
-        ADP: Average Draft Position. This is the players preseason ranking.</br>
-        Pick Lost: The pick you are losing for keeping this player.</br>
-        TKP: Total Keeper Value. This is the total value of your keeper considering the pick
-        that is lost with keeping him.
-      </p>
-    </footer> -->
+    <ng-view autoscroll="true"></ng-view>
 
     <!-- Invlude Angular and UI.Bootstrap -->
     <script src="lib/angular.min.js" charset="utf-8"></script>
+    <script src="lib/angular-route.min.js"></script>
     <script src="lib/ui-bootstrap-tpls-2.5.0.min.js" charset="utf-8"></script>
     <!-- Scripts -->
     <script src="js/app.js" charset="utf-8"></script>
+    <script src="js/routes.js" charset="utf-8"></script>
     <script src="js/valueController.js" charset="utf-8"></script>
   </body>
 </html>

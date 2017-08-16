@@ -1,9 +1,9 @@
-var app = angular.module("keeperApp");
+var app = angular.module('draftApp');
 
 app.controller("valueController", function($scope) {
 
   $scope.player = {
-    "adp": 0, "pick": 0
+    "adp": 0, "pick": 0;
   };
 
   $scope.valueChart = [
