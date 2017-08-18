@@ -6,5 +6,7 @@ app.config(function($routeProvider) {
     templateUrl: 'views/draftOrder.html'
   }).when('/myKeeper', {
     templateUrl: 'views/myKeeper.html'
+  }).when('/rankings', {
+    templateUrl: 'views/rankings.html'
   }).otherwise('/home');
 });

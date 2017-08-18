@@ -1,5 +1,9 @@
 body {
-  background-color: #66AB8C;
+  background-image: url('../img/grass.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  // background-color: #9099A2;
 }
 
 .player-row {
@@ -12,6 +16,33 @@ footer {
   left: 0;
   width: 100%;
   background-color: #FFF7C0;
+}
+
+.jumbotron {
+  background-image: url('../img/leather.jpg');
+  color: #EDF5E1;
+  box-shadow: 10px 10px 10px black;
+}
+
+.member-list, .draft-order {
+  background-color: white;
+  height: 400px;
+  width: 300px;
+  padding: 4px;
+}
+
+.order-container {}
+
+/* Padding for spacing */
+
+.inner {
+  padding: 30px;
+  text-align: center;
+}
+
+.cover-heading {
+  padding-bottom: 20px;
+  padding-top: 60px;
 }
 
 /*
@@ -54,4 +85,21 @@ footer {
   .masthead-nav {
     float: right;
   }
+}
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #EDF5E1;
+  transition: 0.2s;
+  -moz-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+a:focus,
+a:hover {
+  opacity: .7;
+  text-decoration: none;
 }
