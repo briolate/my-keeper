@@ -11,5 +11,12 @@ app.controller("orderController", function($scope) {
     });
     // Clear input fields after push
     $scope.member = "";
+    console.log($scope.members);
+  };
+
+  $scope.randomize = function() {
+    $scope.members.sort(function() {
+      return 0.5 - Math.random()
+    });
   };
 });

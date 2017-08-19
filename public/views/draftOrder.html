@@ -8,20 +8,23 @@
 
     <div class="add-members col-sm-4">
       <input type="text" placeholder="Add member..." ng-model="member">
-      <button ng-click="addMember()" type="button">Add Member</button>
+      <button ng-click="addMember()" type="button">Add Member</button><br><br>
+      <button ng-click="randomize()" type="button">Randomize</button>
     </div>
 
     <div class="member-list col-sm-4">
       <h1>League Members</h1>
       <div ng-repeat="member in members track by $index">
-        <p class="feed"> {{ member.name }} has joined the league.</p>
+        <p class="feed"> {{ ::member.name }} has joined the league.</p>
       </div>
     </div>
 
-    <div class="draft-order col-sm-4">
+    <div class="draft-order col-xs-4">
       <h1>Draft Order</h1>
+      <div ng-repeat="member in members track by $index">
+        <p class="order"> {{ member.name }} </p>
+      </div>
     </div>
-
 
   </div>
 </div>
