@@ -3,4 +3,28 @@
     <h1>Predraft Rankings</h1>
       <p>A tool to help organize your predraft rankings.</p>
   </div>
+
+  <div class="wrapper" ng-controller="rankingsController">
+    <div class="player-form col-sm-6">
+      <form ng-submit="addPlayer(players)">
+        <input type="text" placeholder="Add player..." required ng-model="players.name">
+        <input type="text" placeholder="Add ranking..." required ng-model="players.ranking">
+        <button type="submit" class="button">Add Player</button><br><br>
+      </form>
+      <div ng-show="submissionSuccess">Player added.</div>
+    </div>
+
+    <div class="rankings col-sm-6">
+      <table>
+        <tr>
+          <th>Rank</th>
+          <th>Player</th>
+        </tr>
+        <tr ng-repeat="player in players track by $index">
+          <td>{{ player.name }}</td>
+          <td>{{ player.ranking }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </div>

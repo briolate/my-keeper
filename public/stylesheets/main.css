@@ -24,6 +24,18 @@ footer {
   padding: 10px;
   border: 4px solid black; }
 
+/* Table styling */
+table, th, td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px; }
+
+table tr:nth-child(odd) {
+  background-color: #f1f1f1; }
+
+table tr:nth-child(even) {
+  background-color: #ffffff; }
+
 /* Padding for spacing */
 .inner {
   padding: 30px;

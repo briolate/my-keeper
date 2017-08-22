@@ -1,0 +1,25 @@
+{
+  "name": "fantasy-football-hq",
+  "version": "0.0.1",
+  "description": "A web app for fantasy football.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/briolate/my-keeper.git"
+  },
+  "author": "Evan Briolat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/briolate/my-keeper/issues"
+  },
+  "homepage": "https://github.com/briolate/my-keeper",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "pg": "^7.1.2"
+  }
+}
