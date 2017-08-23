@@ -2,15 +2,32 @@ var app = angular.module('draftApp');
 
 app.controller("rankingsController", function($scope, rankingsService) {
 
-  $scope.players = {};
+  $scope.formItem = {};
 
-  $scope.addPlayer = function(player) {
-    player.name = $scope.name;
-    player.ranking = $scope.ranking;
-    rankingsService.addPlayer(player).then(function() {
-      console.log($scope.players);
-      $scope.submissionSuccess = true;
+    // Load the player data on page load.
+    rankingsService.getAllPlayers().then(function(players) {
+        $scope.players = players;
     });
-    $scope.players = {};
-  };
+
+    // Function on scope called when form is submitted.
+    $scope.addPlayer = function(player) {
+        rankingsService.addPlayer(player).then(function() {
+            // Clear the form.
+            $scope.formItem = {};
+            // Update the list with the new set of players.
+            rankingsService.getAllPlayers().then(function(players) {
+                $scope.players = players;
+            });
+        });
+    };
+
+    // Function on scope called when clicking Delete for a player.
+    $scope.deletePlayer = function(player) {
+        rankingsService.deletePlayer(player.id).then(function() {
+            // Update the list with the new set of items.
+            rankingsService.getAllPlayers().then(function(players) {
+                $scope.players = players;
+            });
+        });
+    };
 });

@@ -4,11 +4,21 @@
       <p>A tool to help organize your predraft rankings.</p>
   </div>
 
+  <div class="btn-group">
+    <label class="btn btn-primary">QB</label>
+    <label class="btn btn-primary">RB</label>
+    <label class="btn btn-primary">WR</label>
+    <label class="btn btn-primary">TE</label>
+    <label class="btn btn-primary">D/ST</label>
+    <label class="btn btn-primary">K</label>
+  </div>
+  </br></br>
+
   <div class="wrapper" ng-controller="rankingsController">
     <div class="player-form col-sm-6">
-      <form ng-submit="addPlayer(players)">
-        <input type="text" placeholder="Add player..." required ng-model="players.name">
-        <input type="text" placeholder="Add ranking..." required ng-model="players.ranking">
+      <form ng-submit="addPlayer(formItem)">
+        <input type="text" placeholder="Add player..." required ng-model="formItem.name">
+        <input type="number" placeholder="Add ranking..." required ng-model="formItem.ranking">
         <button type="submit" class="button">Add Player</button><br><br>
       </form>
       <div ng-show="submissionSuccess">Player added.</div>
@@ -21,8 +31,9 @@
           <th>Player</th>
         </tr>
         <tr ng-repeat="player in players track by $index">
-          <td>{{ player.name }}</td>
           <td>{{ player.ranking }}</td>
+          <td>{{ player.name }}</td>
+          <td><button type="button" ng-click="deletePlayer(player)">Delete</button></td>
         </tr>
       </table>
     </div>
