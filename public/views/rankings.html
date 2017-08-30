@@ -4,38 +4,16 @@
       <p>A tool to help organize your predraft rankings.</p>
   </div>
 
-  <div class="btn-group">
-    <label class="btn btn-primary">QB</label>
-    <label class="btn btn-primary">RB</label>
-    <label class="btn btn-primary">WR</label>
-    <label class="btn btn-primary">TE</label>
-    <label class="btn btn-primary">D/ST</label>
-    <label class="btn btn-primary">K</label>
+  <div class="btn-group" ng-controller="buttonController">
+    <a ui-sref="rankings.qb"><button class="btn btn-danger" ng-class="{true: 'btn-success', false: 'btn-danger'}[isActive]" ng-click="toggleActive()">QB</button></a>
+    <a ui-sref="rankings.rb"><button class="btn btn-danger" ng-class="{true: 'btn-success', false: 'btn-danger'}[isActive]" ng-click="toggleActive()">RB</button></a>
+    <a ui-sref="rankings.wr"><button class="btn btn-danger" ng-class="{true: 'btn-success', false: 'btn-danger'}[isActive]" ng-click="toggleActive()">WR</button></a>
+    <a ui-sref="rankings.te"><button class="btn btn-danger" ng-class="{true: 'btn-success', false: 'btn-danger'}[isActive]" ng-click="toggleActive()">TE</button></a>
+    <a ui-sref="rankings.dst"><button class="btn btn-danger" ng-class="{true: 'btn-success', false: 'btn-danger'}[isActive]" ng-click="toggleActive()">D/ST</button></a>
+    <a ui-sref="rankings.k"><button class="btn btn-danger" ng-class="{true: 'btn-success', false: 'btn-danger'}[isActive]" ng-click="toggleActive()">K</button></a>
   </div>
   </br></br>
 
-  <div class="wrapper" ng-controller="rankingsController">
-    <div class="player-form col-sm-6">
-      <form ng-submit="addPlayer(formItem)">
-        <input type="text" placeholder="Add player..." required ng-model="formItem.name">
-        <input type="number" placeholder="Add ranking..." required ng-model="formItem.ranking">
-        <button type="submit" class="button">Add Player</button><br><br>
-      </form>
-      <div ng-show="submissionSuccess">Player added.</div>
-    </div>
+  <div ui-view></div>
 
-    <div class="rankings col-sm-6">
-      <table>
-        <tr>
-          <th>Rank</th>
-          <th>Player</th>
-        </tr>
-        <tr ng-repeat="player in players track by $index">
-          <td>{{ player.ranking }}</td>
-          <td>{{ player.name }}</td>
-          <td><button type="button" ng-click="deletePlayer(player)">Delete</button></td>
-        </tr>
-      </table>
-    </div>
-  </div>
 </div>

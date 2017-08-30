@@ -12,12 +12,12 @@
     <div id="wrap">
       <div class="masthead clearfix">
         <div class="inner">
-          <h3 class="masthead-brand"><a href="#!/home">Fantasy Draft HQ</a></h3>
+          <h3 class="masthead-brand"><a ui-sref="home">Fantasy Draft HQ</a></h3>
             <nav>
               <ul class="nav masthead-nav">
-                <li><a href="#!/myKeeper"><img src="img/calculator.png" alt="calculator icon" height="60px" width="60px"></a></li>
-                <li><a href="#!/rankings"><img src="img/rankings.png" height="60px" width="60px" alt="rankings icon"></a></li>
-                <li><a href="#!/draftOrder"><img src="img/dice.png" height="60px" width="60px" alt="dice icon"></a></li>
+                <li><a ui-sref="myKeeper"><img src="img/calculator.png" alt="calculator icon" height="60px" width="60px"></a></li>
+                <li><a ui-sref="rankings"><img src="img/rankings.png" height="60px" width="60px" alt="rankings icon"></a></li>
+                <li><a ui-sref="draftOrder"><img src="img/dice.png" height="60px" width="60px" alt="dice icon"></a></li>
               </ul>
             </nav>
         </div>
@@ -25,20 +25,20 @@
       <div class="push"></div>
     </div>
 
-    <ng-view autoscroll="true"></ng-view>
+    <div ui-view></div>
 
     <!-- Invlude Angular and UI.Bootstrap -->
     <script src="lib/angular.min.js" charset="utf-8"></script>
-    <script src="lib/angular-route.min.js"></script>
+    <!-- <script src="lib/angular-route.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
     <script src="lib/ui-bootstrap-tpls-2.5.0.min.js" charset="utf-8"></script>
     <!-- Scripts -->
     <script src="js/app.js" charset="utf-8"></script>
     <script src="js/routes.js" charset="utf-8"></script>
+    <script src="js/buttonController.js" charset="utf-8"></script>
     <script src="js/valueController.js" charset="utf-8"></script>
     <script src="js/orderController.js" charset="utf-8"></script>
     <script src="js/rankingsController.js" charset="utf-8"></script>
     <script src="js/rankingsService.js" charset="utf-8"></script>
-    <!-- <script src="js/playerController.js" charset="utf-8"></script>
-    <script src="js/playerService.js" charset="utf-8"></script> -->
   </body>
 </html>
