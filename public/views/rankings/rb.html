@@ -1,0 +1,24 @@
+<div class="wrapper" ng-controller="rankingsController">
+  <div class="player-form col-sm-6">
+    <form ng-submit="addPlayer(formItem)">
+      <input type="text" placeholder="Add player..." required ng-model="formItem.name">
+      <input type="number" placeholder="Add ranking..." required ng-model="formItem.ranking">
+      <button type="submit" class="button">Add Player</button><br><br>
+    </form>
+    <div ng-show="submissionSuccess">Player added.</div>
+  </div>
+
+  <div class="rankings col-sm-6">
+    <table>
+      <tr>
+        <th>Rank</th>
+        <th>Player</th>
+      </tr>
+      <tr ng-repeat="player in players track by $index">
+        <td>{{ player.ranking }}</td>
+        <td>{{ player.name }}</td>
+        <td><button type="button" ng-click="deletePlayer(player)">Delete</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
