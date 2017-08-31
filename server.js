@@ -31,8 +31,8 @@ app.get('/rankings', function(req, res) {
 
 app.post('/rankings', function(req, res) {
   var player = req.body;
-  var sql = "INSERT INTO rankings(name, ranking)" + "VALUES ($1::text, $2::int)";
-  var values = [player.name, player.ranking];
+  var sql = "INSERT INTO rankings(name, ranking, position)" + "VALUES ($1::text, $2::int, $3::text)";
+  var values = [player.name, player.ranking, player.position];
 
   pool.query(sql, values).then(function() {
     res.status(201);

@@ -7,8 +7,10 @@
   <div class="wrapper" ng-controller="orderController">
 
     <div class="add-members col-sm-4">
-      <input type="text" placeholder="Add member..." ng-model="member">
-      <button ng-click="addMember()" type="button">Add Member</button><br><br>
+      <form ng-submit="addMember()">
+        <input type="text" placeholder="Add member..." required ng-model="member">
+        <button type="submit" class="button">Add Member</button><br><br>
+        <form>
       <button ng-click="randomize()" type="button">Randomize</button>
     </div>
 
