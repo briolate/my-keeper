@@ -23,7 +23,7 @@
         <th>Rank</th>
         <th>Player</th>
       </tr>
-      <tr ng-repeat="player in players | filter : {position: 'QB'} : true | orderBy : {player: -ranking}" >
+      <tr ng-repeat="player in players | filter : {position: 'QB'} : true | orderBy:'ranking':isReverse">
         <td>{{ player.ranking }}</td>
         <td>{{ player.name }}</td>
         <td><button type="button" ng-click="deletePlayer(player)">Delete</button></td>
