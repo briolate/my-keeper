@@ -4,8 +4,8 @@ app.controller("valueController", function($scope) {
 
   $scope.adp = [];
   $scope.pick = [];
-  $scope.tkv = [];
-  let valueChart = [
+  $scope.tvk = [];
+  $scope.valueChart = [
     {"num": 1, "value": 3000},{"num": 2, "value": 2600},{"num": 3, "value": 2200},
     {"num": 4, "value": 1800},{"num": 5, "value": 1700},{"num": 6, "value": 1600},
     {"num": 7, "value": 1500},{"num": 8, "value": 1400},{"num": 9, "value": 1350},
@@ -83,10 +83,9 @@ app.controller("valueController", function($scope) {
     {"num": 223, "value": 2.3},{"num": 224, "value": 2}
   ];
 
-  for(let value of Object.values(valueChart)) {
-    console.log(value);
-  };
-
+  $scope.calculate = function() {
+    $scope.tkv = $scope.adp - $scope.pick;
+  }
 });
 
 // 1	3000
