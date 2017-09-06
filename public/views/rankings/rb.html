@@ -8,9 +8,9 @@
         <option value="QB">QB</option>
         <option value="RB">RB</option>
         <option value="WR">WR</option>
-        <option value="QB">TE</option>
-        <option value="RB">DST</option>
-        <option value="WR">K</option>
+        <option value="TE">TE</option>
+        <option value="DST">DST</option>
+        <option value="K">K</option>
       </select>
       <button type="submit" class="button">Add Player</button><br><br>
     </form>
@@ -23,10 +23,14 @@
         <th>Rank</th>
         <th>Player</th>
       </tr>
-      <tr ng-repeat="player in players | filter : {position: 'RB'} : true">
+      <tr ng-repeat="player in players | filter : {position: 'RB'} : true | orderBy:'ranking':isReverse">
         <td>{{ player.ranking }}</td>
         <td>{{ player.name }}</td>
         <td><button type="button" ng-click="deletePlayer(player)">Delete</button></td>
+        <td>
+          <span class="glyphicon glyphicon-chevron-up"></span>
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </td>
       </tr>
     </table>
   </div>

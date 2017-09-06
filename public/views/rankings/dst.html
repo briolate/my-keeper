@@ -23,10 +23,14 @@
         <th>Rank</th>
         <th>Player</th>
       </tr>
-      <tr ng-repeat="player in players | filter : {position: 'DST'} : true">
+      <tr ng-repeat="player in players | filter : {position: 'DST'} : true | orderBy:'ranking':isReverse">
         <td>{{ player.ranking }}</td>
         <td>{{ player.name }}</td>
         <td><button type="button" ng-click="deletePlayer(player)">Delete</button></td>
+        <td>
+          <span class="glyphicon glyphicon-chevron-up"></span>
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </td>
       </tr>
     </table>
   </div>
