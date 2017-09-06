@@ -43,7 +43,17 @@ app.delete('/rankings/:id', function(req, res) {
   var id = req.params.id;
   pool.query("DELETE FROM rankings WHERE id = $1::int", [id]).then(function(result) {
     res.send("DELETED");
-  });
+  }).catch(errorCallback(res));
+});
+
+app.put('/rankings/:id', function(req, res) {
+  var id = req.params.id; // <-- This gets the :id part of the URL
+  var player = req.body; // <-- Get the parsed JSON body
+  var sql = "UPDATE rankings SET ranking = $2::int" + "WHERE id = $1::int";
+  var values = [id, player.ranking];
+  pool.query(sql, values).then(function() {
+    res.send("UPDATED");
+  }).catch(errorCallback(res));
 });
 
 var port = process.env.PORT || 5000;

@@ -22,4 +22,11 @@ app.service("rankingsService", function($http) {
       return response.data;
     });
   };
+
+  this.editRanking = function(playerId) {
+    return $http.put('/rankings/' + playerId).then(function(response) {
+      console.log(playerid);
+      return response.data;
+    });
+  };
 });

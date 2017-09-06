@@ -30,4 +30,12 @@ app.controller("rankingsController", function($scope, rankingsService) {
       });
     });
   };
+
+  $scope.editRanking = function(player) {
+    rankingsService.editRanking(player.id).then(function() {
+      rankingsService.getAllPlayers().then(function(players) {
+        $scope.player = players;
+      });
+    });
+  };
 });
