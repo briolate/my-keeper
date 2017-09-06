@@ -10,7 +10,7 @@ var pool = new pg.Pool({
   user: "postgres",
   password: 'EBriolat1.',
   host: "localhost",
-  port: 5432,
+  port: 5433,
   database: "postgres",
   ssl: false
 });
