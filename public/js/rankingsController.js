@@ -24,7 +24,7 @@ app.controller("rankingsController", function($scope, rankingsService) {
   // Function on scope called when clicking Delete for a player.
   $scope.deletePlayer = function(player) {
     rankingsService.deletePlayer(player.id).then(function() {
-      // Update the list with the new set of items.
+      // Update the list with the new set of players.
       rankingsService.getAllPlayers().then(function(players) {
         $scope.players = players;
       });

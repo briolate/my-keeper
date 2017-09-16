@@ -2,7 +2,7 @@
   <div class="player-form col-sm-6">
     <form ng-submit="addPlayer(formItem)">
       <input type="text" placeholder="Add player..." required ng-model="formItem.name">
-      <input type="number" placeholder="Add ranking..." required ng-model="formItem.ranking">
+      <input type="number" placeholder="Add ranking..." required ng-model="formItem.rank">
       <select name="positionSelect" required ng-model="formItem.position">
         <option value="" selected disabled>Position</option>
         <option value="QB">QB</option>
@@ -23,13 +23,13 @@
         <th>Rank</th>
         <th>Player</th>
       </tr>
-      <tr ng-repeat="player in players | filter : {position: 'TE'} : true | orderBy:'ranking':isReverse">
-        <td>{{ player.ranking }}</td>
+      <tr ng-repeat="player in players | filter : {position: 'TE'} : true | orderBy:'rank':isReverse">
+        <td>{{ player.rank }}</td>
         <td>{{ player.name }}</td>
         <td><button type="button" ng-click="deletePlayer(player)">Delete</button></td>
         <td>
-          <span class="glyphicon glyphicon-chevron-up"></span>
-          <span class="glyphicon glyphicon-chevron-down"></span>
+          <button class="glyphicon glyphicon-chevron-up" ng-click="editRanking(player)"></button>
+          <button class="glyphicon glyphicon-chevron-down" ng-click="editRanking(player)"></button>
         </td>
       </tr>
     </table>

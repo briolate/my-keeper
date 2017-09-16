@@ -25,7 +25,7 @@ app.service("rankingsService", function($http) {
 
   this.editRanking = function(playerId) {
     return $http.put('/rankings/' + playerId).then(function(response) {
-      console.log(playerid);
+      console.log(playerId);
       return response.data;
     });
   };
