@@ -31,10 +31,20 @@ app.controller("rankingsController", function($scope, rankingsService) {
     });
   };
 
-  $scope.editRanking = function(player) {
+  $scope.editRankingUp = function(player) {
     rankingsService.editRanking(player.id).then(function() {
+      // Update the list with the new set of players.
       rankingsService.getAllPlayers().then(function(players) {
-        $scope.player = players;
+        $scope.players = players;
+      });
+    });
+  };
+
+  $scope.editRankingDown = function(player) {
+    rankingsService.editRanking(player.id).then(function() {
+      // Update the list with the new set of players.
+      rankingsService.getAllPlayers().then(function(players) {
+        $scope.players = players;
       });
     });
   };

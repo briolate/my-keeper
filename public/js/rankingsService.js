@@ -18,14 +18,12 @@ app.service("rankingsService", function($http) {
 
   this.deletePlayer = function(playerId) {
     return $http.delete('/rankings/' + playerId).then(function(response) {
-      console.log(playerId);
       return response.data;
     });
   };
 
   this.editRanking = function(playerId) {
     return $http.put('/rankings/' + playerId).then(function(response) {
-      console.log(playerId);
       return response.data;
     });
   };

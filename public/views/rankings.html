@@ -4,13 +4,13 @@
       <p>A tool to help organize your predraft rankings.</p>
   </div>
 
-  <div class="btn-group" ng-controller="buttonController">
-    <a ui-sref="rankings.qb"><button class="btn btn-danger" ng-class="{true: 'btn-success', false: 'btn-danger'}[isActive]" ng-click="toggleActive()">QB</button></a>
-    <a ui-sref="rankings.rb"><button class="btn btn-danger" ng-class="{true: 'btn-success', false: 'btn-danger'}[isActive]" ng-click="toggleActive()">RB</button></a>
-    <a ui-sref="rankings.wr"><button class="btn btn-danger" ng-class="{true: 'btn-success', false: 'btn-danger'}[isActive]" ng-click="toggleActive()">WR</button></a>
-    <a ui-sref="rankings.te"><button class="btn btn-danger" ng-class="{true: 'btn-success', false: 'btn-danger'}[isActive]" ng-click="toggleActive()">TE</button></a>
-    <a ui-sref="rankings.dst"><button class="btn btn-danger" ng-class="{true: 'btn-success', false: 'btn-danger'}[isActive]" ng-click="toggleActive()">D/ST</button></a>
-    <a ui-sref="rankings.k"><button class="btn btn-danger" ng-class="{true: 'btn-success', false: 'btn-danger'}[isActive]" ng-click="toggleActive()">K</button></a>
+  <div class="btn-group">
+    <a ui-sref="rankings.qb"><label class="btn btn-primary">QB</label></a>
+    <a ui-sref="rankings.rb"><label class="btn btn-primary">RB</label></a>
+    <a ui-sref="rankings.wr"><label class="btn btn-primary">WR</label></a>
+    <a ui-sref="rankings.te"><label class="btn btn-primary">TE</label></a>
+    <a ui-sref="rankings.dst"><label class="btn btn-primary">DST</label></a>
+    <a ui-sref="rankings.k"><label class="btn btn-primary">K</label></a>
   </div>
   </br></br>
 
