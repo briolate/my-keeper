@@ -19,8 +19,8 @@
       </select>
       <select ng-model="pick" ng-options="item.value as item.num for item in valueChart">
         <option value="" selected disabled>Pick Lost</option>
-      </select>
-      <button ng-click="calculate()" type="button">Calculate</button>
+      </select><br><br>
+      <button ng-click="calculate()" class="btn">Calculate</button>
       <output> {{ tkv }} </output>
     </div>
   </div>
