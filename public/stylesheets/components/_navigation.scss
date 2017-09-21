@@ -1,0 +1,38 @@
+/* Header */
+.masthead-nav > li,
+.masthead-brand > li {
+  display: inline-block;
+}
+.masthead-nav > li + li,
+.masthead-brand > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a,
+.masthead-brand > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: $primary-white;
+}
+
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus,
+.masthead-brand > li > a:hover,
+.masthead-brand > li > a:focus {
+  background-color: transparent;
+  color: #05386B;
+}
+
+.masthead a {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}

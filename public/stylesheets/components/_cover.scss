@@ -1,0 +1,21 @@
+/* Cover */
+.inner {
+  padding: 30px;
+  text-align: center;
+}
+
+.cover-heading {
+  padding-bottom: 20px;
+  padding-top: 60px;
+}
+
+/* Jumbotron */
+.jumbotron {
+  background-image: url('../img/leather.jpg');
+  color: $primary-white;
+  box-shadow: 10px 10px 10px black;
+}
+
+.jumbotron .sub {
+  font-size: 14px;
+}

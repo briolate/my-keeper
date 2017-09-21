@@ -1,3 +1,10 @@
+@import 'base/reset';
+@import 'helpers/variables';
+@import 'pages/draftOrder';
+@import 'components/navigation';
+@import 'components/tables';
+@import 'components/cover';
+
 body {
   background-image: url('../img/grass.jpg');
   background-repeat: no-repeat;
@@ -5,7 +12,6 @@ body {
   background-attachment: fixed;
   width: 100%;
   height: 100%;
-  // background-color: #9099A2;
 }
 
 .player-row {
@@ -13,102 +19,18 @@ body {
 }
 
 output {
-  color: #EDF5E1;
-}
-
-.jumbotron {
-  background-image: url('../img/leather.jpg');
-  color: #EDF5E1;
-  box-shadow: 10px 10px 10px black;
-}
-
-.jumbotron .sub {
-  font-size: 14px;
-}
-
-.member-list, .draft-order {
-  background-color: white;
-  padding: 10px;
-  border: 4px solid black;
+  color: $primary-white;
 }
 
 form.tab-form-demo .tab-pane {
     margin: 20px 20px;
-  }
-
-/* Table styling */
-
-table, th , td  {
-  border: 1px solid grey;
-  border-collapse: collapse;
-  padding: 5px;
-}
-table tr:nth-child(odd) {
-  background-color: #f1f1f1;
-}
-table tr:nth-child(even) {
-  background-color: #ffffff;
-}
-
-/* Padding for spacing */
-
-.inner {
-  padding: 30px;
-  text-align: center;
-}
-
-.cover-heading {
-  padding-bottom: 20px;
-  padding-top: 60px;
-}
-
-/*
- * Header
- */
-
-.masthead-nav > li,
-.masthead-brand > li {
-  display: inline-block;
-}
-.masthead-nav > li + li,
-.masthead-brand > li + li {
-  margin-left: 20px;
-}
-.masthead-nav > li > a,
-.masthead-brand > li > a {
-  padding-right: 0;
-  padding-left: 0;
-  font-size: 28px;
-  font-weight: bold;
-  color: #EDF5E1;
-}
-
-.masthead-nav > li > a:hover,
-.masthead-nav > li > a:focus,
-.masthead-brand > li > a:hover,
-.masthead-brand > li > a:focus {
-  background-color: transparent;
-  color: #05386B;
-}
-
-.masthead a {
-  text-decoration: none;
-}
-
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-  }
-  .masthead-nav {
-    float: right;
-  }
 }
 
 /* Links */
 a,
 a:focus,
 a:hover {
-  color: #EDF5E1;
+  color: $primary-white;
   transition: 0.2s;
   -moz-transition: 0.2s;
   -webkit-transition: 0.2s;
@@ -119,187 +41,4 @@ a:focus,
 a:hover {
   opacity: .7;
   text-decoration: none;
-}
-
-/* Animaintion for order randomizer */
-.animate-enter {
-  -webkit-animation: enter 1350ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
-  animation: enter 1350ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
-  display: block;
-  position: relative;
-}
-
-@-webkit-keyframes enter {
-  from {
-    opacity: 0;
-    height: 0px;
-    top: -50px;
-    left: -5px;
-  }
-  10% {
-    left: 45px;
-  }
-  20% {
-    top: 40px;
-  }
-  30% {
-    left: -35px;
-  }
-  40% {
-    top: -30px;
-  }
-  50% {
-    left: 25px;
-  }
-  60% {
-    top: 20px;
-  }
-  70% {
-    left: -15px;
-  }
-  80% {
-    top: -10px;
-  }
-  90% {
-    left: 5px;
-  }
-  to {
-    opacity: 1;
-    height: 30px;
-    left: 0px;
-    top: 0px;
-  }
-}
-
-@keyframes enter {
-  from {
-    opacity: 0;
-    height: 0px;
-    top: -50px;
-    left: -5px;
-  }
-  10% {
-    left: 45px;
-  }
-  20% {
-    top: 40px;
-  }
-  30% {
-    left: -35px;
-  }
-  40% {
-    top: -30px;
-  }
-  50% {
-    left: 25px;
-  }
-  60% {
-    top: 20px;
-  }
-  70% {
-    left: -15px;
-  }
-  80% {
-    top: -10px;
-  }
-  90% {
-    left: 5px;
-  }
-  to {
-    opacity: 1;
-    height: 30px;
-    left: 0px;
-    top: 0px;
-  }
-}
-
-.animate-leave {
-  -webkit-animation: leave 1350ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
-  animation: leave 1350ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
-  display: block;
-  position: relative;
-}
-
-@-webkit-keyframes leave {
-  to {
-    opacity: 0;
-    height: 0px;
-    top: -50px;
-    left: -5px;
-  }
-  90% {
-    left: 45px;
-  }
-  80% {
-    top: 40px;
-  }
-  70% {
-    left: -35px;
-  }
-  60% {
-    top: -30px;
-  }
-  50% {
-    left: 25px;
-  }
-  40% {
-    top: 20px;
-  }
-  30% {
-    left: -15px;
-  }
-  20% {
-    top: -10px;
-  }
-  10% {
-    left: 5px;
-  }
-  from {
-    opacity: 1;
-    height: 30px;
-    left: 0px;
-    top: 0px;
-  }
-}
-
-@keyframes leave {
-  to {
-    opacity: 0;
-    height: 0px;
-    top: -50px;
-    left: -5px;
-  }
-  90% {
-    left: 45px;
-  }
-  80% {
-    top: 40px;
-  }
-  70% {
-    left: -35px;
-  }
-  60% {
-    top: -30px;
-  }
-  50% {
-    left: 25px;
-  }
-  40% {
-    top: 20px;
-  }
-  30% {
-    left: -15px;
-  }
-  20% {
-    top: -10px;
-  }
-  10% {
-    left: 5px;
-  }
-  from {
-    opacity: 1;
-    height: 30px;
-    left: 0px;
-    top: 0px;
-  }
 }
